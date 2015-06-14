@@ -18,3 +18,9 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
+
+DISTFILES += \
+    schema/publishing.sql \
+    schema/imsit.sql \
+    schema/book.sql \
+    schema/user.sql
