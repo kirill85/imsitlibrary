@@ -13,9 +13,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    schema/TSqlSchema.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    schema/TSqlSchema.h
 
 FORMS    += mainwindow.ui
 
