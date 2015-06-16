@@ -18,7 +18,7 @@ public:
 private:
     Ui::MainWindow *ui;
 
-private slots:
+public slots:
     void on_publishButton_clicked();
     void on_eLibraryButton_clicked();
     void on_bookInfoButton_clicked();

@@ -13,8 +13,20 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    ../publisherform.cpp \
+    publisher.cpp \
+    bookinfo.cpp \
+    userinfo.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    ../publisherform.h \
+    publisher.h \
+    bookinfo.h \
+    userinfo.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    ../publisherform.ui \
+    publisher.ui \
+    bookinfo.ui \
+    userinfo.ui
