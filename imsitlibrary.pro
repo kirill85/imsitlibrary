@@ -14,20 +14,17 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    ../publisherform.cpp \
     publisher.cpp \
     bookinfo.cpp \
     userinfo.cpp \
     schema/TSqlSchema.cpp
 
 HEADERS  += mainwindow.h \
-    ../publisherform.h \
     publisher.h \
     bookinfo.h \
     userinfo.h
 
 FORMS    += mainwindow.ui \
-    ../publisherform.ui \
     publisher.ui \
     bookinfo.ui \
     userinfo.ui
