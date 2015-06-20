@@ -6,6 +6,7 @@ BookInfo::BookInfo(QWidget *parent) :
     ui(new Ui::BookInfo)
 {
     ui->setupUi(this);
+    setWindowTitle(tr("Информация о книге"));
 }
 
 BookInfo::~BookInfo()

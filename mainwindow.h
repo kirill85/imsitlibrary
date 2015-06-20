@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "schema/TSqlSchema.h"
+#include "publisher.h"
+#include "bookinfo.h"
+#include "userinfo.h"
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +21,10 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    Publisher *publisher_info;
+    BookInfo *book_info;
+    UserInfo *user_info;
+    TSqlSchema *schema;
 
 public slots:
     void on_publishButton_clicked();

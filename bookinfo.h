@@ -2,6 +2,7 @@
 #define BOOKINFO_H
 
 #include <QDialog>
+#include <QtSql/QSqlTableModel>
 
 namespace Ui {
 class BookInfo;

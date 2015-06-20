@@ -9,6 +9,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    schema = new TSqlSchema(parent);
+    publisher_info = new Publisher(parent);
+    book_info = new BookInfo(parent);
+    user_info = new UserInfo(parent);
 }
 
 MainWindow::~MainWindow()
@@ -19,31 +23,33 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_publishButton_clicked()
 {
-    Publisher publisher_info = new Publisher(parent);
-    publisher_info.show();
-    this->hide();
+    connect(publisher_info, SIGNAL(accepted()), this, SLOT(show()));
+    connect(publisher_info, SIGNAL(rejected()), this, SLOT(show()));
+    publisher_info->show();
+    hide();
 }
 
 void MainWindow::on_eLibraryButton_clicked()
 {
-    BookInfo book_info = new BookInfo(parent);
-    book_info.show();
-
-    UserInfo user_info = new UserInfo(parent);
-    user_info.show();
+    connect(book_info, SIGNAL(accepted()), this, SLOT(show()));
+    connect(user_info, SIGNAL(rejected()), this, SLOT(show()));
+    book_info->show();
+    user_info->show();
     this->hide();
 }
 
 void MainWindow::on_bookInfoButton_clicked()
 {
-    BookInfo book_info = new BookInfo(parent);
-    book_info.show();
+    connect(book_info, SIGNAL(accepted()), this, SLOT(show()));
+    connect(book_info, SIGNAL(rejected()), this, SLOT(show()));
+    book_info->show();
     this->hide();
 }
 
 void MainWindow::on_aboutReaderButton_clicked()
 {
-    UserInfo user_info = new UserInfo(parent);
-    user_info.show();
+    connect(user_info, SIGNAL(accepted()), this, SLOT(show()));
+    connect(user_info, SIGNAL(rejected()), this, SLOT(show()));
+    user_info->show();
     this->hide();
 }

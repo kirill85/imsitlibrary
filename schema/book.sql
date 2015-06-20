@@ -10,8 +10,8 @@ create table "book" (
     "storageId" integer not null,
     "userId" integer not null,
     primary key ("isbn"),
-    foreign key ("publishingId") on "publishing"."id",
-    foreign key ("genreId") on "genre"."id",
-    foreign key ("storageId") on "storage"."id",
-    foreign key ("userId") on "user"."id"
+    foreign key ("publishingId") references "publishing"("id"),
+    foreign key ("genreId") references "genre"("id"),
+    foreign key ("storageId") references "storage"("id"),
+    foreign key ("userId") references "user"("id")
 );

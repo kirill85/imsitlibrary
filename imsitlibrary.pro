@@ -4,13 +4,12 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = imsitlibrary
 TEMPLATE = app
-
 
 SOURCES += main.cpp\
         mainwindow.cpp \
@@ -36,4 +35,6 @@ DISTFILES += \
     schema/publishing.sql \
     schema/imsit.sql \
     schema/book.sql \
-    schema/user.sql
+    schema/user.sql \
+    schema/genre.sql \
+    schema/storage.sql
